@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Responsive travel booking home page." />
+    <title>Book My Trip</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar page-width">
+        <a class="logo" href="#top" aria-label="Book My Trip home">bookmy<span>trip</span><small>.com</small></a>
+        <div class="support"><b>●</b><span>Call 24/7 Support<br /><strong>+91 6369870677</strong></span></div>
+        <label class="site-search"><span class="visually-hidden">Search site</span><input type="search" placeholder="Search entire website here" /><button aria-label="Search">⌕</button></label>
+        <div class="header-actions"><button class="round-button" aria-label="Call support">●</button><button class="round-button" aria-label="Search site">⌕</button></div>
+      </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <div class="page-width nav-inner">
+          <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰ <span>Home</span></button>
+          <ul id="nav-links">
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#flights">Flights</a></li>
+            <li><a href="#vacations">Vacations</a></li>
+            <li><a href="#deals">Hot Deals</a></li>
+            <li><a href="#guides">Travel Guides</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+          </ul>
+          <div class="account-actions"><button class="sign-up">Sign up</button><button class="my-account">My account</button></div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Featured destination">
+        <div class="page-width hero-inner">
+          <article class="hero-copy">
+            <h1>The Taj Mahal Palace, Mumbai, India</h1>
+            <strong><span>$1200</span> Inclusive of food, dinner</strong>
+          </article>
+          <form class="booking-form" id="booking-form">
+            <h2>Book Your Trip</h2>
+            <div class="form-grid">
+              <label>What?<select name="property"><option>Hotels</option><option>Resorts</option><option>Villas</option></select></label>
+              <label>Where?<input name="location" type="text" placeholder="Location" /></label>
+              <label>When?<input name="date" type="date" /></label>
+              <label>Who?<select name="rooms"><option>Rooms</option><option>2 Rooms</option><option>3 Rooms</option></select></label>
+              <label class="compact"><select name="adults" aria-label="Adults"><option>Adults</option><option>1 Adult</option><option>2 Adults</option><option>3 Adults</option></select></label>
+              <label class="compact"><select name="children" aria-label="Children"><option>Children</option><option>1 Child</option><option>2 Children</option></select></label>
+              <button class="search-button" type="submit">Search</button>
+            </div>
+            <output id="form-message" aria-live="polite"></output>
+          </form>
+        </div>
+      </section>
+
+      <section class="content-section page-width" id="hotels">
+        <div class="section-heading"><h2>Popular Hotels</h2><div><button class="slider-arrow" data-carousel="previous" aria-label="Previous hotels">‹</button><button class="slider-arrow" data-carousel="next" aria-label="Next hotels">›</button></div></div>
+        <div class="hotel-grid" id="hotel-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="content-section page-width" id="deals">
+        <div class="section-heading"><h2>Hot Deals</h2></div>
+        <div class="deal-grid" id="deal-grid"></div>
+      </section>
+
+      <section class="latest-post page-width" id="blogs">
+        <h2>Latest Blogs</h2><a href="#guides">Best places to visit in India</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width footer-grid">
+        <section><h2>Company</h2><a href="#top">About the company</a><a href="#top">Terms and Conditions</a><a href="#top">Privacy Policy</a><a href="#top">Career</a></section>
+        <section><h2>Customer Support</h2><a href="#top">Contact</a><a href="#top">FAQ</a></section>
+        <section><h2>Follow us</h2><div class="socials"><a href="#top" aria-label="Facebook">f</a><a href="#top" aria-label="Twitter">t</a><a href="#top" aria-label="LinkedIn">in</a><a href="#top" aria-label="YouTube">▶</a><a href="#top" aria-label="Google">g+</a></div></section>
+        <section class="subscribe"><h2>Don’t miss our deals and offers</h2><form id="subscribe-form"><input type="email" aria-label="Your email" placeholder="Enter your email id" required /><button>Subscribe</button></form><output id="subscribe-message" aria-live="polite"></output></section>
+      </div>
+      <div class="page-width copyright">copyright © 2013, All rights reserved</div>
+    </footer>
+    <script src="web.js"></script>
+  </body>
+</html>
